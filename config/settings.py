@@ -43,6 +43,7 @@ THIRD_PARTY_APPS = [
     'phonenumber_field',
     'rest_framework',
     'drf_spectacular',
+    'django_rest_passwordreset',
 ]
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -202,6 +203,22 @@ SIMPLE_JWT = {
     "SLIDING_TOKEN_LIFETIME": timedelta(minutes=60),
     "SLIDING_TOKEN_REFRESH_LIFETIME": timedelta(days=1),
 }
+
+EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
+EMAIL_HOST_USER = env_config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env_config('EMAIL_HOST_PASSWORD')
+
+DJANGO_REST_PASSWORDRESET_TOKEN_CONFIG = {
+    "CLASS": "django_rest_passwordreset.tokens.RandomStringTokenGenerator",
+    "OPTIONS": {
+        "min_length": 20,
+        "max_length": 30
+    }
+}
+
 
 with contextlib.suppress(ImportError):
     from .local_settings import *

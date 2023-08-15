@@ -1,9 +1,15 @@
-from django.urls import path
-from .views import UserRegisterView, UserLoginView
+from django.urls import path, include
 
-app_name = 'accounts'
+from rest_framework import routers
+
+from .views import CustomUserViewSet
+
+router = routers.DefaultRouter()
+
+router.register(r'users', CustomUserViewSet, basename='users')
 
 urlpatterns = [
-    path('register/', UserRegisterView.as_view(), name='register'),
-    path('login/', UserLoginView.as_view(), name='login'),
+    path('password-reset/', include('django_rest_passwordreset.urls', namespace='password_reset')),
 ]
+
+urlpatterns += router.urls
