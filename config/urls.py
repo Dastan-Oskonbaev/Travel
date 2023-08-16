@@ -45,6 +45,7 @@ api_v1_urlpatterns = [
     path('schema/', include(swagger_urlpatterns)),
     path('token/', include(auth_urlpatterns)),
     path('accounts/', include('apps.accounts.urls')),
+    path('culture/', include('apps.culture.urls')),
 ]
 urlpatterns = [
     path('admin/', admin.site.urls),
