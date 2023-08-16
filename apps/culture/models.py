@@ -13,6 +13,8 @@ class CultureCategory(models.Model):
     image = models.ImageField(
         _('image'),
         upload_to=f'culture_category/{name}',
+        blank=True,
+        null=True
     )
 
     def __str__(self):
