@@ -1,6 +1,9 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
+from django.contrib.contenttypes.fields import GenericRelation
+
+from apps.reviews.models import Review
 
 
 class Region(models.Model):
@@ -84,6 +87,10 @@ class Place(models.Model):
         on_delete=models.CASCADE,
         related_name='places',
         verbose_name=_('Region')
+    )
+    reviews = GenericRelation(
+        Review,
+        verbose_name=_('Reviews'),
     )
 
     def __str__(self):
@@ -205,6 +212,10 @@ class Hotels(models.Model):
     phone_number = PhoneNumberField(
         _('Phone Number')
     )
+    reviews = GenericRelation(
+        Review,
+        verbose_name=_('Reviews'),
+    )
 
     def __str__(self):
         return self.name
@@ -274,6 +285,10 @@ class Restaurants(models.Model):
     )
     phone_number = PhoneNumberField(
         _('Phone Number')
+    )
+    reviews = GenericRelation(
+        Review,
+        verbose_name=_('Reviews'),
     )
 
     def __str__(self):
@@ -363,6 +378,28 @@ class Events(models.Model):
         verbose_name_plural = _('Events')
 
 
+class EventsImage(models.Model):
+    events = models.ForeignKey(
+        Events,
+        on_delete=models.CASCADE,
+        related_name='images',
+        verbose_name=_('Event')
+    )
+    image = models.ImageField(
+        _('Image'),
+        upload_to=f'events {events.name}',
+        blank=True,
+        null=True
+    )
+
+    def __str__(self):
+        return self.events.name
+
+    class Meta:
+        verbose_name = _('Event image')
+        verbose_name_plural = _('Event images')
+
+
 class Attractions(models.Model):
     name = models.CharField(
         _('Name'),
@@ -379,6 +416,10 @@ class Attractions(models.Model):
     )
     contacts = PhoneNumberField(
         _('Contacts')
+    )
+    reviews = GenericRelation(
+        Review,
+        verbose_name=_('Reviews'),
     )
 
     def __str__(self):
