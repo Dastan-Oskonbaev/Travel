@@ -46,6 +46,7 @@ api_v1_urlpatterns = [
     path('token/', include(auth_urlpatterns)),
     path('accounts/', include('apps.accounts.urls')),
     path('culture/', include('apps.culture.urls')),
+    path('places/', include('apps.places.urls'))
 ]
 urlpatterns = [
     path('admin/', admin.site.urls),
