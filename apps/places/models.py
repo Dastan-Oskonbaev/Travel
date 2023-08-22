@@ -1,5 +1,8 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.contrib.contenttypes.fields import GenericRelation
+
+from apps.reviews.models import Review
 
 
 class Region(models.Model):
@@ -23,7 +26,6 @@ class Region(models.Model):
     class Meta:
         verbose_name = _('Region')
         verbose_name_plural = _('Regions')
-        ordering = ['name']
 
 
 class WhatToTry(models.Model):
@@ -47,7 +49,6 @@ class WhatToTry(models.Model):
     class Meta:
         verbose_name = _('What to try')
         verbose_name_plural = _('What to try')
-        ordering = ['name']
 
 
 class WhatToTryImage(models.Model):
@@ -70,7 +71,6 @@ class WhatToTryImage(models.Model):
     class Meta:
         verbose_name = _('What to try image')
         verbose_name_plural = _('What to try images')
-        ordering = ['name']
 
 
 class Place(models.Model):
@@ -87,6 +87,10 @@ class Place(models.Model):
         related_name='places',
         verbose_name=_('Region')
     )
+    reviews = GenericRelation(
+        Review,
+        verbose_name=_('Reviews'),
+    )
 
     def __str__(self):
         return self.name
@@ -94,7 +98,6 @@ class Place(models.Model):
     class Meta:
         verbose_name = _('Place')
         verbose_name_plural = _('Places')
-        ordering = ['name']
 
 
 class PlaceImage(models.Model):
@@ -117,7 +120,6 @@ class PlaceImage(models.Model):
     class Meta:
         verbose_name = _('Place image')
         verbose_name_plural = _('Place images')
-        ordering = ['name']
 
 
 class Hotels(models.Model):
@@ -134,6 +136,10 @@ class Hotels(models.Model):
         related_name='hotels',
         verbose_name=_('Place')
     )
+    reviews = GenericRelation(
+        Review,
+        verbose_name=_('Reviews'),
+    )
 
     def __str__(self):
         return self.name
@@ -141,7 +147,6 @@ class Hotels(models.Model):
     class Meta:
         verbose_name = _('Hotel')
         verbose_name_plural = _('Hotels')
-        ordering = ['name']
 
 
 class HotelsImage(models.Model):
@@ -164,7 +169,6 @@ class HotelsImage(models.Model):
     class Meta:
         verbose_name = _('Hotel image')
         verbose_name_plural = _('Hotel images')
-        ordering = ['name']
 
 
 class Restaurants(models.Model):
@@ -187,6 +191,10 @@ class Restaurants(models.Model):
     specialized_menu = models.CharField(
         max_length=100
     )
+    reviews = GenericRelation(
+        Review,
+        verbose_name=_('Reviews'),
+    )
 
     def __str__(self):
         return self.name
@@ -194,7 +202,6 @@ class Restaurants(models.Model):
     class Meta:
         verbose_name = _('Restaurant')
         verbose_name_plural = _('Restaurants')
-        ordering = ['name']
 
 
 class RestaurantsImage(models.Model):
@@ -217,7 +224,6 @@ class RestaurantsImage(models.Model):
     class Meta:
         verbose_name = _('Restaurant image')
         verbose_name_plural = _('Restaurant images')
-        ordering = ['name']
 
 
 class Events(models.Model):
@@ -249,7 +255,6 @@ class Events(models.Model):
     class Meta:
         verbose_name = _('Event')
         verbose_name_plural = _('Events')
-        ordering = ['name']
 
 
 class EventsImage(models.Model):
@@ -272,7 +277,6 @@ class EventsImage(models.Model):
     class Meta:
         verbose_name = _('Event image')
         verbose_name_plural = _('Event images')
-        ordering = ['name']
 
 
 class Attractions(models.Model):
@@ -289,6 +293,10 @@ class Attractions(models.Model):
         related_name='attractions',
         verbose_name=_('Place')
     )
+    reviews = GenericRelation(
+        Review,
+        verbose_name=_('Reviews'),
+    )
 
     def __str__(self):
         return self.name
@@ -296,7 +304,6 @@ class Attractions(models.Model):
     class Meta:
         verbose_name = _('Attraction')
         verbose_name_plural = _('Attractions')
-        ordering = ['name']
 
 
 class AttractionsImage(models.Model):
@@ -319,4 +326,3 @@ class AttractionsImage(models.Model):
     class Meta:
         verbose_name = _('Attraction image')
         verbose_name_plural = _('Attraction images')
-        ordering = ['name']
