@@ -181,7 +181,12 @@ class Restaurants(models.Model):
         related_name='restaurants',
         verbose_name=_('Place')
     )
-    price_range = models.Charfield
+    price_range = models.CharField(
+        max_length=100
+    )
+    specialized_menu = models.CharField(
+        max_length=100
+    )
 
     def __str__(self):
         return self.name
