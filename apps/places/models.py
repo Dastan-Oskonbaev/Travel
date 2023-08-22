@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 class Region(models.Model):
@@ -134,6 +135,81 @@ class Hotels(models.Model):
         related_name='hotels',
         verbose_name=_('Place')
     )
+    bedrooms = models.PositiveIntegerField(
+        _('Bedrooms')
+    )
+    bathrooms = models.PositiveIntegerField(
+        _('Bathrooms')
+    )
+    car_parking = models.PositiveIntegerField(
+        _('Car Parking')
+    )
+    pets = models.PositiveIntegerField(
+        _('Pets')
+    )
+    price = models.CharField(
+        _('Price'),
+        max_length=100
+    )
+    kitchen = models.BooleanField(
+        _('Kitchen'),
+        default=False
+    )
+    conditioner = models.BooleanField(
+        _('Conditioner'),
+        default=False
+    )
+    washer = models.BooleanField(
+        _('Washer'),
+        default=False
+    )
+    tv_netflix = models.BooleanField(
+        _('TV with Netflix'),
+        default=False
+    )
+    wifi = models.BooleanField(
+        _('Free Wi-Fi'),
+        default=False
+    )
+    balcony = models.BooleanField(
+        _('Balcony or Patio'),
+        default=False
+    )
+    garden = models.BooleanField(
+        _('Green space or gardens'),
+        default=False
+    )
+    car_rent = models.BooleanField(
+        _('Car rental services'),
+        default=False
+    )
+    hairdryer = models.BooleanField(
+        _('Hairdryers'),
+        default=False
+    )
+    iron_board = models.BooleanField(
+        _('Iron and ironing board'),
+        default=False
+    )
+    pool = models.BooleanField(
+        _('Swimming pool'),
+        default=False
+    )
+    gym = models.BooleanField(
+        _('Fitness center or gym'),
+        default=False
+    )
+    game_room = models.BooleanField(
+        _('Game room'),
+        default=False
+    )
+    address = models.CharField(
+        _('Address'),
+        max_length=100
+    )
+    phone_number = PhoneNumberField(
+        _('Phone Number')
+    )
 
     def __str__(self):
         return self.name
@@ -182,10 +258,29 @@ class Restaurants(models.Model):
         verbose_name=_('Place')
     )
     price_range = models.CharField(
+        _('Price Range'),
         max_length=100
     )
     specialized_menu = models.CharField(
+        _('Specialized menu'),
         max_length=100
+    )
+    meal_time = models.CharField(
+        _('Meal Time'),
+        max_length=100
+    )
+    website = models.URLField(
+        _('Website')
+    )
+    address = models.CharField(
+        _('Address'),
+        max_length=100
+    )
+    email = models.EmailField(
+        _('Email')
+    )
+    phone_number = PhoneNumberField(
+        _('Phone Number')
     )
 
     def __str__(self):
@@ -220,6 +315,20 @@ class RestaurantsImage(models.Model):
         ordering = ['name']
 
 
+class EventsCategory(models.Model):
+    name = models.CharField(
+        _('Name'),
+        max_length=100
+    )
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = _('Events Category')
+        verbose_name_plural = _('Events Categories')
+
+
 class Events(models.Model):
     name = models.CharField(
         _('Name'),
@@ -237,6 +346,12 @@ class Events(models.Model):
         on_delete=models.CASCADE,
         related_name='events',
         verbose_name=_('Place')
+    )
+    category = models.ForeignKey(
+        EventsCategory,
+        on_delete=models.CASCADE,
+        related_name='events',
+        verbose_name=_('Category')
     )
     address = models.CharField(
         _('Address'),
@@ -288,6 +403,9 @@ class Attractions(models.Model):
         on_delete=models.CASCADE,
         related_name='attractions',
         verbose_name=_('Place')
+    )
+    contacts = PhoneNumberField(
+        _('Contacts')
     )
 
     def __str__(self):
