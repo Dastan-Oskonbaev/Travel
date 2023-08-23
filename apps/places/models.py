@@ -1,9 +1,10 @@
 from django.db import models
-from django.utils.datetime_safe import datetime
-from datetime import date
 from django.utils.translation import gettext_lazy as _
-from phonenumber_field.modelfields import PhoneNumberField
 from django.contrib.contenttypes.fields import GenericRelation
+
+from datetime import date
+
+from phonenumber_field.modelfields import PhoneNumberField
 
 from apps.reviews.models import Review
 

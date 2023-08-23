@@ -1,16 +1,10 @@
-from datetime import datetime
-
-from django.db.models import Q
 from django.shortcuts import get_object_or_404
-from django_filters import rest_framework as filters
 
-from rest_framework import generics, permissions, viewsets
-from rest_framework.filters import OrderingFilter
-from rest_framework.response import Response
+from rest_framework import generics, permissions
 
 from .models import Region, Place, Hotels, Restaurants, Attractions, Events
-from .serializers import RegionSerializer, PlaceDetailSerializer, HotelsDetailSerializer, RestaurantsDetailSerializer, \
-    AttractionsDetailSerializer, EventsSerializer, PlaceSerializer
+from .serializers import (RegionSerializer, PlaceDetailSerializer, HotelsDetailSerializer,
+                          RestaurantsDetailSerializer, AttractionsDetailSerializer, EventsSerializer)
 
 
 class RegionDetailView(generics.RetrieveAPIView):
@@ -49,7 +43,6 @@ class EventsFilteredList(generics.ListAPIView):
     def get_queryset(self):
         place_id = self.kwargs['place_id']
         start_date = self.request.query_params.get('start_date')
-        # end_date = self.request.query_params.get('end_date')
         category_id = self.request.query_params.get('category_id')
 
         place = get_object_or_404(Place, pk=place_id)

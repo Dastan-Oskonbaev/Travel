@@ -12,7 +12,8 @@ from .models import (
     RestaurantsImage,
     Events,
     Attractions,
-    AttractionsImage, EventsCategory,
+    AttractionsImage,
+    EventsCategory,
 )
 
 
