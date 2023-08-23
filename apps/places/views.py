@@ -1,25 +1,38 @@
 from rest_framework import generics, permissions
-from rest_framework.response import Response
 
-from .models import WhatToTry, Region
-from .serializers import WhatToTrySerializer, RegionSerializer
+from .models import Region, Place, Hotels, Restaurants, Attractions
+from .serializers import RegionSerializer, PlaceDetailSerializer, HotelsDetailSerializer, RestaurantsDetailSerializer, \
+    AttractionsDetailSerializer
 
 
 class RegionDetailView(generics.RetrieveAPIView):
-    queryset = Region.object.all()
+    queryset = Region.objects.all()
     serializer_class = RegionSerializer
     permission_classes = [permissions.AllowAny]
 
 
-class WhatToTryListView(generics.ListAPIView):
-    serializer_class = WhatToTrySerializer
+class PlaceDetailView(generics.RetrieveAPIView):
+    queryset = Place.objects.all()
+    serializer_class = PlaceDetailSerializer
     permission_classes = [permissions.AllowAny]
 
-    def get_queryset(self):
-        region_id = self.kwargs['region_id']
-        queryset = WhatToTry.objects.filter(region_id=region_id)
-        return queryset
 
+class HotelDetailView(generics.RetrieveAPIView):
+    queryset = Hotels.objects.all()
+    serializer_class = HotelsDetailSerializer
+    permission_classes = [permissions.AllowAny]
+
+
+class RestaurantDetailView(generics.RetrieveAPIView):
+    queryset = Restaurants.objects.all()
+    serializer_class = RestaurantsDetailSerializer
+    permission_classes = [permissions.AllowAny]
+
+
+class AttractionsDetailView(generics.RetrieveAPIView):
+    queryset = Attractions.objects.all()
+    serializer_class = AttractionsDetailSerializer
+    permission_classes = [permissions.AllowAny]
 
 
 

@@ -207,7 +207,9 @@ class Hotels(models.Model):
     )
     address = models.CharField(
         _('Address'),
-        max_length=100
+        max_length=100,
+        null=True,
+        blank=True
     )
     phone_number = PhoneNumberField(
         _('Phone Number')
@@ -336,6 +338,18 @@ class EventsCategory(models.Model):
 
 
 class Events(models.Model):
+    category = models.ForeignKey(
+        EventsCategory,
+        on_delete=models.CASCADE,
+        related_name='event',
+        verbose_name=_('Events Category'),
+    )
+    place = models.ForeignKey(
+        Place,
+        on_delete=models.CASCADE,
+        related_name='events',
+        verbose_name=_('Place')
+    )
     name = models.CharField(
         _('Name'),
         max_length=100
@@ -346,18 +360,6 @@ class Events(models.Model):
     date = models.DateTimeField(
         _('Date'),
         auto_now_add=True,
-    )
-    place = models.ForeignKey(
-        Place,
-        on_delete=models.CASCADE,
-        related_name='events',
-        verbose_name=_('Place')
-    )
-    category = models.ForeignKey(
-        EventsCategory,
-        on_delete=models.CASCADE,
-        related_name='events',
-        verbose_name=_('Category')
     )
     address = models.CharField(
         _('Address'),
@@ -378,28 +380,6 @@ class Events(models.Model):
         verbose_name_plural = _('Events')
 
 
-class EventsImage(models.Model):
-    events = models.ForeignKey(
-        Events,
-        on_delete=models.CASCADE,
-        related_name='images',
-        verbose_name=_('Event')
-    )
-    image = models.ImageField(
-        _('Image'),
-        upload_to=f'events {events.name}',
-        blank=True,
-        null=True
-    )
-
-    def __str__(self):
-        return self.events.name
-
-    class Meta:
-        verbose_name = _('Event image')
-        verbose_name_plural = _('Event images')
-
-
 class Attractions(models.Model):
     name = models.CharField(
         _('Name'),
@@ -415,7 +395,9 @@ class Attractions(models.Model):
         verbose_name=_('Place')
     )
     contacts = PhoneNumberField(
-        _('Contacts')
+        _('Contacts'),
+        null=True,
+        blank=True
     )
     reviews = GenericRelation(
         Review,
