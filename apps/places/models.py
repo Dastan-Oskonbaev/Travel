@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils.datetime_safe import datetime
+from datetime import date
 from django.utils.translation import gettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
 from django.contrib.contenttypes.fields import GenericRelation
@@ -354,12 +356,13 @@ class Events(models.Model):
         _('Name'),
         max_length=100
     )
-    description = models.TextField(
-        _('Description'),
-    )
-    date = models.DateTimeField(
+    date = models.DateField(
         _('Date'),
-        auto_now_add=True,
+        default=date.today,
+    )
+    time = models.CharField(
+        _('Time'),
+        max_length=20
     )
     address = models.CharField(
         _('Address'),

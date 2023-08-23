@@ -192,7 +192,6 @@ class EventsSerializer(serializers.ModelSerializer):
             'category',
             'place',
             'name',
-            'description',
             'date',
             'address',
             'poster'
@@ -254,4 +253,9 @@ class PlaceDetailSerializer(serializers.ModelSerializer):
         )
 
 
+class PlaceSerializer(serializers.ModelSerializer):
+    events = EventsSerializer(many=True, read_only=True)
 
+    class Meta:
+        model = Place
+        fields = '__all__'
