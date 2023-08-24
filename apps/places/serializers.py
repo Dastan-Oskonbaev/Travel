@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from .models import (Region, WhatToTry, WhatToTryImage, Place, PlaceImage, Hotels, HotelsImage, Restaurants,
                      RestaurantsImage, EventsCategory, Attractions, AttractionsImage, Events)
-from ..reviews.models import Review
+from apps.reviews.serializers import ReviewSerializer
 
 
 class WhatToTryImageSerializer(serializers.ModelSerializer):
@@ -27,18 +27,6 @@ class WhatToTrySerializer(serializers.ModelSerializer):
         )
 
 
-class ReviewSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Review
-        fields = (
-            'id',
-            'text',
-            'author',
-            'content_type',
-            'rating',
-        )
-
-
 class PlaceImageSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -59,6 +47,7 @@ class PlacesSerializer(serializers.ModelSerializer):
             'description',
             'region',
             'image',
+            'average_rating',
         )
 
 
@@ -119,6 +108,7 @@ class HotelsDetailSerializer(serializers.ModelSerializer):
             'address',
             'phone_number',
             'reviews',
+            'average_rating',
         )
 
 
@@ -219,7 +209,8 @@ class AttractionsDetailSerializer(serializers.ModelSerializer):
             'description',
             'place',
             'contacts',
-            'reviews'
+            'reviews',
+            'average_rating',
         )
 
 
@@ -249,7 +240,8 @@ class PlaceDetailSerializer(serializers.ModelSerializer):
             'restaurants',
             'events',
             'attractions',
-            'reviews'
+            'reviews',
+            'average_rating',
         )
 
 
