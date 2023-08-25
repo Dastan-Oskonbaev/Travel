@@ -2,7 +2,7 @@ from django.contrib.contenttypes.models import ContentType
 
 from rest_framework import serializers
 
-from .models import Review, Rating
+from .models import Review, Rating, RestaurantRating
 
 
 class ReviewSerializer(serializers.ModelSerializer):
@@ -50,4 +50,22 @@ class RatingSerializer(serializers.ModelSerializer):
         read_only_fields = (
             'id',
             'user',
+        )
+
+
+class RestaurantRatingSerializer(serializers.ModelSerializer):
+    user = serializers.ReadOnlyField(source='user.username')
+    rating = serializers.ReadOnlyField()
+
+    class Meta:
+        model = RestaurantRating
+        fields = (
+            'id',
+            'user',
+            'restaurant',
+            'rating',
+            'nutrition',
+            'service',
+            'price_quality',
+            'atmosphere',
         )

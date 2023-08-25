@@ -79,3 +79,57 @@ class Rating(models.Model):
         verbose_name = _('Rating')
         verbose_name_plural = _('Ratings')
         unique_together = ['user', 'content_type', 'object_id']
+
+
+class RestaurantRating(models.Model):
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='restaurant_rating',
+        verbose_name=_('User'),
+    )
+    restaurant = models.ForeignKey(
+        'places.Restaurants',
+        on_delete=models.CASCADE,
+        related_name='rating',
+        verbose_name=_('Restaurant')
+    )
+    rating = models.DecimalField(
+        _('Rating'),
+        max_digits=3,
+        decimal_places=2,
+        default=0,
+        null=True,
+        blank=True,
+    )
+    nutrition = models.DecimalField(
+        _('Nutrition'),
+        max_digits=3,
+        decimal_places=2,
+        default=0,
+    )
+    service = models.DecimalField(
+        _('Service'),
+        max_digits=3,
+        decimal_places=2,
+        default=0,
+    )
+    price_quality = models.DecimalField(
+        _('Price Quality'),
+        max_digits=3,
+        decimal_places=2,
+        default=0,
+    )
+    atmosphere = models.DecimalField(
+        _('Atmosphere'),
+        max_digits=3,
+        decimal_places=2,
+        default=0,
+    )
+
+    def __str__(self):
+        return f'Rating {self.rating} by {self.user} on {self.restaurant.name}'
+
+    class Meta:
+        verbose_name = _('Restaurant Rating')
+        verbose_name_plural = _('Restaurants Rating')

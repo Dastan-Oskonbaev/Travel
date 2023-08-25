@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Review, Rating
+from .models import Review, Rating, RestaurantRating
 
 
 @admin.register(Review)
@@ -49,3 +49,30 @@ class RatingAdmin(admin.ModelAdmin):
     list_per_page = 25
     ordering = ('-id',)
     readonly_fields = ('id',)
+
+
+@admin.register(RestaurantRating)
+class RestaurantRatingAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'user',
+        'restaurant',
+        'rating',
+        'nutrition',
+        'service',
+        'price_quality',
+        'atmosphere',
+    )
+    list_display_links = (
+        'user',
+    )
+    search_fields = (
+        'user',
+        'restaurant',
+        'rating',
+    )
+    list_filter = (
+        'user',
+    )
+    list_per_page = 25
+    ordering = ('-id',)
