@@ -48,6 +48,7 @@ api_v1_urlpatterns = [
     path('culture/', include('apps.culture.urls')),
     path('places/', include('apps.places.urls')),
     path('reviews/', include('apps.reviews.urls')),
+    path('favorites/', include('apps.favorites.urls'))
 ]
 urlpatterns = [
     path('admin/', admin.site.urls),

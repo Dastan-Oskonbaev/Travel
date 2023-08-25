@@ -40,6 +40,7 @@ MY_APPS = [
     'apps.culture',
     'apps.places',
     'apps.reviews',
+    'apps.favorites',
 ]
 THIRD_PARTY_APPS = [
     'corsheaders',
