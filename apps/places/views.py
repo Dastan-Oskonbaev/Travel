@@ -40,6 +40,7 @@ class AttractionsDetailView(generics.RetrieveAPIView):
 
 class EventsFilteredList(generics.ListAPIView):
     serializer_class = EventsSerializer
+    permission_classes = [permissions.AllowAny]
 
     def get_queryset(self):
         place_id = self.kwargs['place_id']
