@@ -1,0 +1,429 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-31 02:51+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: apps/accounts/apps.py:8 apps/accounts/models.py:44
+#: apps/favorites/models.py:13 apps/reviews/models.py:48
+#: apps/reviews/models.py:89
+msgid "User"
+msgstr "用户"
+
+#: apps/accounts/apps.py:9 apps/accounts/models.py:45
+msgid "Users"
+msgstr "用户"
+
+#: apps/accounts/models.py:10
+msgid "First Name"
+msgstr "名字"
+
+#: apps/accounts/models.py:16
+msgid "Last Name"
+msgstr "姓"
+
+#: apps/accounts/models.py:23 apps/places/models.py:310
+msgid "Email"
+msgstr "电邮"
+
+#: apps/accounts/models.py:27 apps/places/models.py:230
+#: apps/places/models.py:313
+msgid "Phone Number"
+msgstr "电话号码"
+
+#: apps/accounts/models.py:33
+msgid "Date of Birth"
+msgstr "出生日期"
+
+#: apps/culture/apps.py:8 apps/culture/models.py:53
+msgid "Culture"
+msgstr "文化"
+
+#: apps/culture/apps.py:9 apps/culture/models.py:54
+msgid "Cultures"
+msgstr "文化"
+
+#: apps/culture/models.py:7 apps/culture/models.py:36 apps/places/models.py:14
+#: apps/places/models.py:40 apps/places/models.py:85 apps/places/models.py:143
+#: apps/places/models.py:278 apps/places/models.py:362
+#: apps/places/models.py:388 apps/places/models.py:420
+msgid "Name"
+msgstr "姓名"
+
+#: apps/culture/models.py:11 apps/culture/models.py:40 apps/places/models.py:24
+#: apps/places/models.py:44 apps/places/models.py:89 apps/places/models.py:147
+#: apps/places/models.py:282 apps/places/models.py:424
+msgid "Description"
+msgstr "资料描述"
+
+#: apps/culture/models.py:14 apps/culture/models.py:43 apps/places/models.py:69
+#: apps/places/models.py:127 apps/places/models.py:262
+#: apps/places/models.py:346 apps/places/models.py:467
+msgid "Image"
+msgstr "图像"
+
+#: apps/culture/models.py:24
+msgid "Culture Category"
+msgstr "文化类别"
+
+#: apps/culture/models.py:25
+msgid "Culture Categories"
+msgstr "文化类别"
+
+#: apps/culture/models.py:33
+msgid "Category"
+msgstr "类别："
+
+#: apps/favorites/apps.py:8 apps/favorites/apps.py:9
+#: apps/favorites/models.py:21
+msgid "Favorites"
+msgstr "收藏品"
+
+#: apps/favorites/models.py:20 apps/favorites/models.py:29
+#: apps/favorites/models.py:50 apps/favorites/models.py:71
+#: apps/favorites/models.py:92
+msgid "Favorite"
+msgstr "最喜欢的"
+
+#: apps/favorites/models.py:34 apps/places/apps.py:8 apps/places/models.py:115
+#: apps/places/models.py:124 apps/places/models.py:153
+#: apps/places/models.py:288 apps/places/models.py:385
+#: apps/places/models.py:430
+msgid "Place"
+msgstr "地点"
+
+#: apps/favorites/models.py:41
+msgid "Favorite Place"
+msgstr "最喜欢的地方"
+
+#: apps/favorites/models.py:42
+msgid "Favorite Places"
+msgstr "最喜欢的地方"
+
+#: apps/favorites/models.py:55 apps/places/models.py:250
+#: apps/places/models.py:259
+msgid "Hotel"
+msgstr "酒店"
+
+#: apps/favorites/models.py:62
+msgid "Favorite Hotel"
+msgstr "最喜欢的酒店"
+
+#: apps/favorites/models.py:63
+msgid "Favorite Hotels"
+msgstr "最受欢迎酒店"
+
+#: apps/favorites/models.py:76 apps/places/models.py:334
+#: apps/places/models.py:343 apps/reviews/models.py:95
+msgid "Restaurant"
+msgstr "食肆"
+
+#: apps/favorites/models.py:83
+msgid "Favorite Restaurant"
+msgstr "最喜欢的餐厅"
+
+#: apps/favorites/models.py:84
+msgid "Favorite Restaurants"
+msgstr "最喜欢的餐厅"
+
+#: apps/favorites/models.py:97 apps/places/models.py:455
+#: apps/places/models.py:464
+msgid "Attraction"
+msgstr "吸引力"
+
+#: apps/favorites/models.py:104
+msgid "Favorite Attraction"
+msgstr "最喜欢的景点"
+
+#: apps/favorites/models.py:105
+msgid "Favorite Attractions"
+msgstr "最喜欢的景点"
+
+#: apps/places/apps.py:9 apps/places/models.py:116
+msgid "Places"
+msgstr "地方"
+
+#: apps/places/models.py:18
+msgid "Photo"
+msgstr "照片"
+
+#: apps/places/models.py:27 apps/places/models.py:108
+msgid "Boundary"
+msgstr "边界"
+
+#: apps/places/models.py:34 apps/places/models.py:50 apps/places/models.py:95
+msgid "Region"
+msgstr "区域"
+
+#: apps/places/models.py:35
+msgid "Regions"
+msgstr "区议会分区"
+
+#: apps/places/models.py:57 apps/places/models.py:58 apps/places/models.py:66
+msgid "What to try"
+msgstr "尝试什么"
+
+#: apps/places/models.py:79
+msgid "What to try image"
+msgstr "什么尝试图像"
+
+#: apps/places/models.py:80
+msgid "What to try images"
+msgstr "什么尝试图像"
+
+#: apps/places/models.py:99 apps/places/models.py:234 apps/places/models.py:317
+#: apps/places/models.py:439 apps/reviews/apps.py:9 apps/reviews/models.py:40
+msgid "Reviews"
+msgstr "检讨报告"
+
+#: apps/places/models.py:102 apps/places/models.py:237
+#: apps/places/models.py:320 apps/places/models.py:442
+msgid "Average Rating"
+msgstr "平均评级"
+
+#: apps/places/models.py:137
+msgid "Place image"
+msgstr "放置图像"
+
+#: apps/places/models.py:138
+msgid "Place images"
+msgstr "放置图像"
+
+#: apps/places/models.py:156
+msgid "Bedrooms"
+msgstr "卧室"
+
+#: apps/places/models.py:159
+msgid "Bathrooms"
+msgstr "浴室"
+
+#: apps/places/models.py:162
+msgid "Car Parking"
+msgstr "停车场"
+
+#: apps/places/models.py:165
+msgid "Pets"
+msgstr "宠物"
+
+#: apps/places/models.py:168
+msgid "Price"
+msgstr "价格；价格"
+
+#: apps/places/models.py:172
+msgid "Kitchen"
+msgstr "厨房"
+
+#: apps/places/models.py:176
+msgid "Conditioner"
+msgstr "护发素"
+
+#: apps/places/models.py:180
+msgid "Washer"
+msgstr "洗衣机"
+
+#: apps/places/models.py:184
+msgid "TV with Netflix"
+msgstr "电视与Netflix"
+
+#: apps/places/models.py:188
+msgid "Free Wi-Fi"
+msgstr "免费Wi-Fi"
+
+#: apps/places/models.py:192
+msgid "Balcony or Patio"
+msgstr "阳台或露台"
+
+#: apps/places/models.py:196
+msgid "Green space or gardens"
+msgstr "绿地或花园"
+
+#: apps/places/models.py:200
+msgid "Car rental services"
+msgstr "租车服务"
+
+#: apps/places/models.py:204
+msgid "Hairdryers"
+msgstr "吹风机"
+
+#: apps/places/models.py:208
+msgid "Iron and ironing board"
+msgstr "熨斗和熨衣板"
+
+#: apps/places/models.py:212
+msgid "Swimming pool"
+msgstr "游泳池"
+
+#: apps/places/models.py:216
+msgid "Fitness center or gym"
+msgstr "健身中心或健身房"
+
+#: apps/places/models.py:220
+msgid "Game room"
+msgstr "游戏室"
+
+#: apps/places/models.py:224 apps/places/models.py:306
+#: apps/places/models.py:400
+msgid "Address"
+msgstr "地址"
+
+#: apps/places/models.py:243 apps/places/models.py:326
+#: apps/places/models.py:448
+msgid "Location"
+msgstr "地点"
+
+#: apps/places/models.py:251
+msgid "Hotels"
+msgstr "酒店"
+
+#: apps/places/models.py:272
+msgid "Hotel image"
+msgstr "酒店形象"
+
+#: apps/places/models.py:273
+msgid "Hotel images"
+msgstr "酒店图片"
+
+#: apps/places/models.py:291
+msgid "Price Range"
+msgstr "价格范围"
+
+#: apps/places/models.py:295
+msgid "Specialized menu"
+msgstr "专业菜单"
+
+#: apps/places/models.py:299
+msgid "Meal Time"
+msgstr "用餐时间"
+
+#: apps/places/models.py:303
+msgid "Website"
+msgstr "网站"
+
+#: apps/places/models.py:335
+msgid "Restaurants"
+msgstr "餐厅"
+
+#: apps/places/models.py:356
+msgid "Restaurant image"
+msgstr "餐厅形象"
+
+#: apps/places/models.py:357
+msgid "Restaurant images"
+msgstr "餐厅图片"
+
+#: apps/places/models.py:370 apps/places/models.py:379
+msgid "Events Category"
+msgstr "活动类别"
+
+#: apps/places/models.py:371
+msgid "Events Categories"
+msgstr "活动类别"
+
+#: apps/places/models.py:392
+msgid "Date"
+msgstr "日期"
+
+#: apps/places/models.py:396
+msgid "Time"
+msgstr "时间"
+
+#: apps/places/models.py:404
+msgid "Poster"
+msgstr "海报"
+
+#: apps/places/models.py:414
+msgid "Event"
+msgstr "活动"
+
+#: apps/places/models.py:415
+msgid "Events"
+msgstr "活动"
+
+#: apps/places/models.py:433
+msgid "Contacts"
+msgstr "联络人"
+
+#: apps/places/models.py:456
+msgid "Attractions"
+msgstr "景点"
+
+#: apps/places/models.py:477
+msgid "Attraction image"
+msgstr "吸引力图像"
+
+#: apps/places/models.py:478
+msgid "Attraction images"
+msgstr "景点图片"
+
+#: apps/reviews/apps.py:8 apps/reviews/models.py:39
+msgid "Review"
+msgstr "检讨"
+
+#: apps/reviews/models.py:13
+msgid "Text"
+msgstr "文本"
+
+#: apps/reviews/models.py:19
+msgid "Author"
+msgstr "作者"
+
+#: apps/reviews/models.py:25 apps/reviews/models.py:54
+msgid "Content type"
+msgstr "内容类型"
+
+#: apps/reviews/models.py:28 apps/reviews/models.py:57
+msgid "Object id"
+msgstr "对象id"
+
+#: apps/reviews/models.py:64
+msgid "Rating value"
+msgstr "评级价值"
+
+#: apps/reviews/models.py:79 apps/reviews/models.py:98
+msgid "Rating"
+msgstr "评级"
+
+#: apps/reviews/models.py:80
+msgid "Ratings"
+msgstr "评级结果"
+
+#: apps/reviews/models.py:106
+msgid "Nutrition"
+msgstr "营养"
+
+#: apps/reviews/models.py:112
+msgid "Service"
+msgstr "服务"
+
+#: apps/reviews/models.py:118
+msgid "Price Quality"
+msgstr "价格及品质"
+
+#: apps/reviews/models.py:124
+msgid "Atmosphere"
+msgstr "大气"
+
+#: apps/reviews/models.py:134
+msgid "Restaurant Rating"
+msgstr "食肆评级"
+
+#: apps/reviews/models.py:135
+msgid "Restaurants Rating"
+msgstr "食肆评级"
+
+#: apps/reviews/views.py:48
+msgid "You have already rated this content."
+msgstr "您已经对此内容进行了评级。"

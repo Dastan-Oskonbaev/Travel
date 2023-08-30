@@ -4,14 +4,14 @@ from django.utils.translation import gettext_lazy as _
 
 class CultureCategory(models.Model):
     name = models.CharField(
-        _('name'),
+        _('Name'),
         max_length=100
     )
     description = models.TextField(
-        _('description'),
+        _('Description'),
     )
     image = models.ImageField(
-        _('image'),
+        _('Image'),
         upload_to=f'culture_category/{name}',
         blank=True,
         null=True
@@ -30,17 +30,17 @@ class Culture(models.Model):
         CultureCategory,
         on_delete=models.CASCADE,
         related_name='cultures',
-        verbose_name=_('category')
+        verbose_name=_('Category')
     )
     name = models.CharField(
-        _('name'),
+        _('Name'),
         max_length=100
     )
     description = models.TextField(
-        _('description'),
+        _('Description'),
     )
     image = models.ImageField(
-        _('image'),
+        _('Image'),
         upload_to=f'culture/{name}',
         blank=True,
         null=True
@@ -52,5 +52,3 @@ class Culture(models.Model):
     class Meta:
         verbose_name = _('Culture')
         verbose_name_plural = _('Cultures')
-
-

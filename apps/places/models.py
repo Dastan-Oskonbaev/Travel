@@ -23,7 +23,9 @@ class Region(models.Model):
     description = models.TextField(
         _('Description'),
     )
-    boundary = models.MultiPolygonField()
+    boundary = models.MultiPolygonField(
+        _('Boundary'),
+    )
 
     def __str__(self):
         return self.name
@@ -102,7 +104,9 @@ class Place(models.Model):
         decimal_places=2,
         default=0,
     )
-    boundary = models.MultiPolygonField()
+    boundary = models.MultiPolygonField(
+        _('Boundary'),
+    )
 
     def __str__(self):
         return self.name
@@ -235,7 +239,9 @@ class Hotels(models.Model):
         decimal_places=2,
         default=0,
     )
-    location = models.PointField()
+    location = models.PointField(
+        _('Location'),
+    )
 
     def __str__(self):
         return self.name
@@ -316,7 +322,9 @@ class Restaurants(models.Model):
         decimal_places=2,
         default=0,
     )
-    location = models.PointField()
+    location = models.PointField(
+        _('Location'),
+    )
     
 
     def __str__(self):
@@ -436,7 +444,9 @@ class Attractions(models.Model):
         decimal_places=2,
         default=0,
     )
-    location = models.PointField()
+    location = models.PointField(
+        _('Location'),
+    )
 
     def __str__(self):
         return self.name

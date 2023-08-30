@@ -10,7 +10,7 @@ class Favorite(models.Model):
         CustomUser,
         on_delete=models.CASCADE,
         related_name='favorite',
-        verbose_name=_('CustomUser'),
+        verbose_name=_('User'),
     )
 
     def __str__(self):

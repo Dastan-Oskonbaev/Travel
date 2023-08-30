@@ -1,0 +1,431 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-31 02:51+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: apps/accounts/apps.py:8 apps/accounts/models.py:44
+#: apps/favorites/models.py:13 apps/reviews/models.py:48
+#: apps/reviews/models.py:89
+msgid "User"
+msgstr "المستخدم"
+
+#: apps/accounts/apps.py:9 apps/accounts/models.py:45
+msgid "Users"
+msgstr "المستخدمون"
+
+#: apps/accounts/models.py:10
+msgid "First Name"
+msgstr "الاسم الأول"
+
+#: apps/accounts/models.py:16
+msgid "Last Name"
+msgstr "اسم العائلة"
+
+#: apps/accounts/models.py:23 apps/places/models.py:310
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: apps/accounts/models.py:27 apps/places/models.py:230
+#: apps/places/models.py:313
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+#: apps/accounts/models.py:33
+msgid "Date of Birth"
+msgstr "تاريخ الميلاد"
+
+#: apps/culture/apps.py:8 apps/culture/models.py:53
+msgid "Culture"
+msgstr "الثقافة"
+
+#: apps/culture/apps.py:9 apps/culture/models.py:54
+msgid "Cultures"
+msgstr "الثقافات"
+
+#: apps/culture/models.py:7 apps/culture/models.py:36 apps/places/models.py:14
+#: apps/places/models.py:40 apps/places/models.py:85 apps/places/models.py:143
+#: apps/places/models.py:278 apps/places/models.py:362
+#: apps/places/models.py:388 apps/places/models.py:420
+msgid "Name"
+msgstr "الاسم"
+
+#: apps/culture/models.py:11 apps/culture/models.py:40 apps/places/models.py:24
+#: apps/places/models.py:44 apps/places/models.py:89 apps/places/models.py:147
+#: apps/places/models.py:282 apps/places/models.py:424
+msgid "Description"
+msgstr "الوصف"
+
+#: apps/culture/models.py:14 apps/culture/models.py:43 apps/places/models.py:69
+#: apps/places/models.py:127 apps/places/models.py:262
+#: apps/places/models.py:346 apps/places/models.py:467
+msgid "Image"
+msgstr "صورة"
+
+#: apps/culture/models.py:24
+msgid "Culture Category"
+msgstr "فئة الثقافة"
+
+#: apps/culture/models.py:25
+msgid "Culture Categories"
+msgstr "فئات الثقافة"
+
+#: apps/culture/models.py:33
+msgid "Category"
+msgstr "الفئة"
+
+#: apps/favorites/apps.py:8 apps/favorites/apps.py:9
+#: apps/favorites/models.py:21
+msgid "Favorites"
+msgstr "المفضلة"
+
+#: apps/favorites/models.py:20 apps/favorites/models.py:29
+#: apps/favorites/models.py:50 apps/favorites/models.py:71
+#: apps/favorites/models.py:92
+msgid "Favorite"
+msgstr "المفضلة"
+
+#: apps/favorites/models.py:34 apps/places/apps.py:8 apps/places/models.py:115
+#: apps/places/models.py:124 apps/places/models.py:153
+#: apps/places/models.py:288 apps/places/models.py:385
+#: apps/places/models.py:430
+msgid "Place"
+msgstr "المكان"
+
+#: apps/favorites/models.py:41
+msgid "Favorite Place"
+msgstr "المكان المفضل"
+
+#: apps/favorites/models.py:42
+msgid "Favorite Places"
+msgstr "الأماكن المفضلة"
+
+#: apps/favorites/models.py:55 apps/places/models.py:250
+#: apps/places/models.py:259
+msgid "Hotel"
+msgstr "الفندق"
+
+#: apps/favorites/models.py:62
+msgid "Favorite Hotel"
+msgstr "الفندق المفضل"
+
+#: apps/favorites/models.py:63
+msgid "Favorite Hotels"
+msgstr "الفنادق المفضلة"
+
+#: apps/favorites/models.py:76 apps/places/models.py:334
+#: apps/places/models.py:343 apps/reviews/models.py:95
+msgid "Restaurant"
+msgstr "مطعم"
+
+#: apps/favorites/models.py:83
+msgid "Favorite Restaurant"
+msgstr "المطعم المفضل"
+
+#: apps/favorites/models.py:84
+msgid "Favorite Restaurants"
+msgstr "المطاعم المفضلة"
+
+#: apps/favorites/models.py:97 apps/places/models.py:455
+#: apps/places/models.py:464
+msgid "Attraction"
+msgstr "جاذبية"
+
+#: apps/favorites/models.py:104
+msgid "Favorite Attraction"
+msgstr "الجذب المفضل"
+
+#: apps/favorites/models.py:105
+msgid "Favorite Attractions"
+msgstr "مناطق الجذب المفضلة"
+
+#: apps/places/apps.py:9 apps/places/models.py:116
+msgid "Places"
+msgstr "الأماكن"
+
+#: apps/places/models.py:18
+msgid "Photo"
+msgstr "صور"
+
+#: apps/places/models.py:27 apps/places/models.py:108
+msgid "Boundary"
+msgstr "الحدود"
+
+#: apps/places/models.py:34 apps/places/models.py:50 apps/places/models.py:95
+msgid "Region"
+msgstr "المنطقة"
+
+#: apps/places/models.py:35
+msgid "Regions"
+msgstr "المناطق"
+
+#: apps/places/models.py:57 apps/places/models.py:58 apps/places/models.py:66
+msgid "What to try"
+msgstr "ماذا تحاول"
+
+#: apps/places/models.py:79
+msgid "What to try image"
+msgstr "ماذا تجرب الصورة"
+
+#: apps/places/models.py:80
+msgid "What to try images"
+msgstr "ماذا تجرب الصور"
+
+#: apps/places/models.py:99 apps/places/models.py:234 apps/places/models.py:317
+#: apps/places/models.py:439 apps/reviews/apps.py:9 apps/reviews/models.py:40
+msgid "Reviews"
+msgstr "التعليقات"
+
+#: apps/places/models.py:102 apps/places/models.py:237
+#: apps/places/models.py:320 apps/places/models.py:442
+msgid "Average Rating"
+msgstr "متوسط التقييم"
+
+#: apps/places/models.py:137
+msgid "Place image"
+msgstr "مكان الصورة"
+
+#: apps/places/models.py:138
+msgid "Place images"
+msgstr "ضع الصور"
+
+#: apps/places/models.py:156
+msgid "Bedrooms"
+msgstr "غرف نوم"
+
+#: apps/places/models.py:159
+msgid "Bathrooms"
+msgstr "الحمامات"
+
+#: apps/places/models.py:162
+msgid "Car Parking"
+msgstr "مواقف السيارات"
+
+#: apps/places/models.py:165
+msgid "Pets"
+msgstr "الحيوانات الأليفة"
+
+#: apps/places/models.py:168
+msgid "Price"
+msgstr "السعر"
+
+#: apps/places/models.py:172
+msgid "Kitchen"
+msgstr "المطبخ"
+
+#: apps/places/models.py:176
+msgid "Conditioner"
+msgstr "مكيف"
+
+#: apps/places/models.py:180
+msgid "Washer"
+msgstr "غسالة"
+
+#: apps/places/models.py:184
+msgid "TV with Netflix"
+msgstr "تلفزيون مع نيتفليكس"
+
+#: apps/places/models.py:188
+msgid "Free Wi-Fi"
+msgstr "واي فاي مجاني"
+
+#: apps/places/models.py:192
+msgid "Balcony or Patio"
+msgstr "شرفة أو فناء"
+
+#: apps/places/models.py:196
+msgid "Green space or gardens"
+msgstr "مساحات خضراء أو حدائق"
+
+#: apps/places/models.py:200
+msgid "Car rental services"
+msgstr "خدمات تأجير السيارات"
+
+#: apps/places/models.py:204
+msgid "Hairdryers"
+msgstr "مجففات الشعر"
+
+#: apps/places/models.py:208
+msgid "Iron and ironing board"
+msgstr "مكواة وطاولة كي"
+
+#: apps/places/models.py:212
+msgid "Swimming pool"
+msgstr "حمام سباحة"
+
+#: apps/places/models.py:216
+msgid "Fitness center or gym"
+msgstr "مركز اللياقة البدنية أو صالة الألعاب الرياضية"
+
+#: apps/places/models.py:220
+msgid "Game room"
+msgstr "غرفة ألعاب"
+
+#: apps/places/models.py:224 apps/places/models.py:306
+#: apps/places/models.py:400
+msgid "Address"
+msgstr "العنوان"
+
+#: apps/places/models.py:243 apps/places/models.py:326
+#: apps/places/models.py:448
+msgid "Location"
+msgstr "الموقع"
+
+#: apps/places/models.py:251
+msgid "Hotels"
+msgstr "الفنادق"
+
+#: apps/places/models.py:272
+msgid "Hotel image"
+msgstr "صورة الفندق"
+
+#: apps/places/models.py:273
+msgid "Hotel images"
+msgstr "صور الفندق"
+
+#: apps/places/models.py:291
+msgid "Price Range"
+msgstr "النطاق السعري"
+
+#: apps/places/models.py:295
+msgid "Specialized menu"
+msgstr "قائمة متخصصة"
+
+#: apps/places/models.py:299
+msgid "Meal Time"
+msgstr "وقت الوجبة"
+
+#: apps/places/models.py:303
+msgid "Website"
+msgstr "الموقع الإلكتروني"
+
+#: apps/places/models.py:335
+msgid "Restaurants"
+msgstr "المطاعم"
+
+#: apps/places/models.py:356
+msgid "Restaurant image"
+msgstr "صورة المطعم"
+
+#: apps/places/models.py:357
+msgid "Restaurant images"
+msgstr "صور المطعم"
+
+#: apps/places/models.py:370 apps/places/models.py:379
+msgid "Events Category"
+msgstr "فئة الفعاليات"
+
+#: apps/places/models.py:371
+msgid "Events Categories"
+msgstr "فئات الفعاليات"
+
+#: apps/places/models.py:392
+msgid "Date"
+msgstr "التاريخ"
+
+#: apps/places/models.py:396
+msgid "Time"
+msgstr "الوقت"
+
+#: apps/places/models.py:404
+msgid "Poster"
+msgstr "ملصق"
+
+#: apps/places/models.py:414
+msgid "Event"
+msgstr "الحدث"
+
+#: apps/places/models.py:415
+msgid "Events"
+msgstr "الفعاليات"
+
+#: apps/places/models.py:433
+msgid "Contacts"
+msgstr "جهات الاتصال"
+
+#: apps/places/models.py:456
+msgid "Attractions"
+msgstr "الجذب السياحي"
+
+#: apps/places/models.py:477
+msgid "Attraction image"
+msgstr "صورة الجذب"
+
+#: apps/places/models.py:478
+msgid "Attraction images"
+msgstr "صور الجذب"
+
+#: apps/reviews/apps.py:8 apps/reviews/models.py:39
+msgid "Review"
+msgstr "مراجعة"
+
+#: apps/reviews/models.py:13
+msgid "Text"
+msgstr "النص"
+
+#: apps/reviews/models.py:19
+msgid "Author"
+msgstr "المؤلف"
+
+#: apps/reviews/models.py:25 apps/reviews/models.py:54
+msgid "Content type"
+msgstr "نوع المحتوى"
+
+#: apps/reviews/models.py:28 apps/reviews/models.py:57
+msgid "Object id"
+msgstr "معرف الكائن"
+
+#: apps/reviews/models.py:64
+msgid "Rating value"
+msgstr "قيمة التقييم"
+
+#: apps/reviews/models.py:79 apps/reviews/models.py:98
+msgid "Rating"
+msgstr "التقييم"
+
+#: apps/reviews/models.py:80
+msgid "Ratings"
+msgstr "التقييمات"
+
+#: apps/reviews/models.py:106
+msgid "Nutrition"
+msgstr "التغذية"
+
+#: apps/reviews/models.py:112
+msgid "Service"
+msgstr "الخدمات"
+
+#: apps/reviews/models.py:118
+msgid "Price Quality"
+msgstr "جودة السعر"
+
+#: apps/reviews/models.py:124
+msgid "Atmosphere"
+msgstr "الغلاف الجوي"
+
+#: apps/reviews/models.py:134
+msgid "Restaurant Rating"
+msgstr "تصنيف المطعم"
+
+#: apps/reviews/models.py:135
+msgid "Restaurants Rating"
+msgstr "تصنيف المطاعم"
+
+#: apps/reviews/views.py:48
+msgid "You have already rated this content."
+msgstr "لقد قمت بالفعل بتقييم هذا المحتوى."

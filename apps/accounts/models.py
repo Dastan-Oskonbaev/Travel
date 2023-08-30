@@ -7,13 +7,13 @@ from phonenumber_field.modelfields import PhoneNumberField
 
 class CustomUser(AbstractUser):
     first_name = models.CharField(
-        _("first_name"),
+        _("First Name"),
         max_length=150,
         blank=True,
         null=True
     )
     last_name = models.CharField(
-        _("last_name"),
+        _("Last Name"),
         max_length=150,
         blank=True,
         null=True
@@ -24,13 +24,13 @@ class CustomUser(AbstractUser):
         unique=True
     )
     phone_number = PhoneNumberField(
-        _("phone_number"),
+        _("Phone Number"),
         null=True,
         blank=True,
         unique=True
     )
     date_of_birth = models.DateField(
-        _("date_of_birth"),
+        _("Date of Birth"),
         null=True,
         blank=True,
     )
