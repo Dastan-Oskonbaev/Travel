@@ -49,6 +49,7 @@ THIRD_PARTY_APPS = [
     'drf_spectacular',
     'django_rest_passwordreset',
     'django_filters',
+    'leaflet',
 ]
 INSTALLED_APPS = [
     'django.contrib.admin',

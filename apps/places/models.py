@@ -1,8 +1,8 @@
+from datetime import date
+
 from django.contrib.gis.db import models
 from django.utils.translation import gettext_lazy as _
 from django.contrib.contenttypes.fields import GenericRelation
-
-from datetime import date
 
 from phonenumber_field.modelfields import PhoneNumberField
 

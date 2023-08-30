@@ -1,5 +1,7 @@
 from django.contrib import admin
 
+from leaflet.admin import LeafletGeoAdmin
+
 from .models import (
     Region,
     WhatToTry,
@@ -28,7 +30,7 @@ class WhatToTryInline(admin.TabularInline):
 
 
 @admin.register(Region)
-class RegionAdmin(admin.ModelAdmin):
+class RegionAdmin(LeafletGeoAdmin):
     list_display = (
         'id',
         'name',
@@ -90,7 +92,7 @@ class PlaceImageInline(admin.TabularInline):
 
 
 @admin.register(Place)
-class PlaceAdmin(admin.ModelAdmin):
+class PlaceAdmin(LeafletGeoAdmin):
     list_display = (
         'id',
         'name',
@@ -131,7 +133,7 @@ class HotelsImageInline(admin.TabularInline):
 
 
 @admin.register(Hotels)
-class HotelsAdmin(admin.ModelAdmin):
+class HotelsAdmin(LeafletGeoAdmin):
     list_display = (
         'id',
         'name',
@@ -173,7 +175,7 @@ class RestaurantsImageInline(admin.TabularInline):
 
 
 @admin.register(Restaurants)
-class RestaurantsAdmin(admin.ModelAdmin):
+class RestaurantsAdmin(LeafletGeoAdmin):
     list_display = (
         'id',
         'name',
@@ -257,7 +259,7 @@ class AttractionsImageInline(admin.TabularInline):
 
 
 @admin.register(Attractions)
-class AttractionsAdmin(admin.ModelAdmin):
+class AttractionsAdmin(LeafletGeoAdmin):
     list_display = (
         'id',
         'name',
