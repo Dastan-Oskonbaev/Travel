@@ -20,6 +20,12 @@ class PlaceDetailView(generics.RetrieveAPIView):
     permission_classes = [permissions.AllowAny]
 
 
+class PlaceDestroyView(generics.DestroyAPIView):
+    queryset = Place.objects.all()
+    serializer_class = PlaceDetailSerializer
+    permission_classes = [permissions.AllowAny]
+
+
 class HotelDetailView(generics.RetrieveAPIView):
     queryset = Hotels.objects.all()
     serializer_class = HotelsDetailSerializer

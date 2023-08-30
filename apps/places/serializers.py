@@ -151,6 +151,7 @@ class RestaurantsDetailSerializer(serializers.ModelSerializer):
             'address',
             'email',
             'phone_number',
+            'average_rating',
         )
 
 
