@@ -48,6 +48,7 @@ class PlacesSerializer(serializers.ModelSerializer):
             'region',
             'image',
             'average_rating',
+            'boundary',
         )
 
 
@@ -64,6 +65,7 @@ class RegionSerializer(serializers.ModelSerializer):
             'description',
             'what_to_try',
             'places',
+            'boundary',
         )
 
 
@@ -109,6 +111,7 @@ class HotelsDetailSerializer(serializers.ModelSerializer):
             'phone_number',
             'reviews',
             'average_rating',
+            'location',
         )
 
 
@@ -152,6 +155,7 @@ class RestaurantsDetailSerializer(serializers.ModelSerializer):
             'email',
             'phone_number',
             'average_rating',
+            'location',
         )
 
 
@@ -212,6 +216,7 @@ class AttractionsDetailSerializer(serializers.ModelSerializer):
             'contacts',
             'reviews',
             'average_rating',
+            'location',
         )
 
 

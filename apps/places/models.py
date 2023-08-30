@@ -1,4 +1,4 @@
-from django.db import models
+from django.contrib.gis.db import models
 from django.utils.translation import gettext_lazy as _
 from django.contrib.contenttypes.fields import GenericRelation
 
@@ -23,6 +23,7 @@ class Region(models.Model):
     description = models.TextField(
         _('Description'),
     )
+    boundary = models.MultiPolygonField()
 
     def __str__(self):
         return self.name
@@ -101,6 +102,7 @@ class Place(models.Model):
         decimal_places=2,
         default=0,
     )
+    boundary = models.MultiPolygonField()
 
     def __str__(self):
         return self.name
@@ -233,6 +235,7 @@ class Hotels(models.Model):
         decimal_places=2,
         default=0,
     )
+    location = models.PointField()
 
     def __str__(self):
         return self.name
@@ -313,6 +316,7 @@ class Restaurants(models.Model):
         decimal_places=2,
         default=0,
     )
+    location = models.PointField()
     
 
     def __str__(self):
@@ -432,6 +436,7 @@ class Attractions(models.Model):
         decimal_places=2,
         default=0,
     )
+    location = models.PointField()
 
     def __str__(self):
         return self.name
