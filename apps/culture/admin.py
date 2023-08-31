@@ -1,10 +1,12 @@
 from django.contrib import admin
 
+from modeltranslation.admin import TranslationAdmin
+
 from .models import CultureCategory, Culture
 
 
 @admin.register(CultureCategory)
-class CultureCategoryAdmin(admin.ModelAdmin):
+class CultureCategoryAdmin(TranslationAdmin):
     list_display = ('name', 'description')
     list_display_links = ('name',)
     search_fields = ('name', 'description')
@@ -13,7 +15,7 @@ class CultureCategoryAdmin(admin.ModelAdmin):
 
 
 @admin.register(Culture)
-class CultureAdmin(admin.ModelAdmin):
+class CultureAdmin(TranslationAdmin):
     list_display = ('name',)
     list_display_links = ('name',)
     search_fields = ('name', 'description')

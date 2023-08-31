@@ -52,6 +52,7 @@ THIRD_PARTY_APPS = [
     'leaflet',
 ]
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -144,7 +145,7 @@ LANGUAGES = [
     ('ru', 'Russian'),
     ('en', 'English'),
     ('ar', 'Arabic'),
-    ('ch', 'Chinese'),
+    ('zh-hans', 'Chinese'),
 ]
 
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'

@@ -1,5 +1,7 @@
 from django.contrib import admin
 
+from modeltranslation.admin import TranslationAdmin, TranslationTabularInline
+
 from leaflet.admin import LeafletGeoAdmin
 
 from .models import (
@@ -24,13 +26,13 @@ class WhatToTryImageInline(admin.TabularInline):
     extra = 1
 
 
-class WhatToTryInline(admin.TabularInline):
+class WhatToTryInline(TranslationTabularInline):
     model = WhatToTry
     extra = 1
 
 
 @admin.register(Region)
-class RegionAdmin(LeafletGeoAdmin):
+class RegionAdmin(TranslationAdmin, LeafletGeoAdmin):
     list_display = (
         'id',
         'name',
@@ -50,7 +52,7 @@ class RegionAdmin(LeafletGeoAdmin):
 
 
 @admin.register(WhatToTry)
-class WhatToTryAdmin(admin.ModelAdmin):
+class WhatToTryAdmin(TranslationAdmin):
     list_display = (
         'id',
         'name',
@@ -92,7 +94,7 @@ class PlaceImageInline(admin.TabularInline):
 
 
 @admin.register(Place)
-class PlaceAdmin(LeafletGeoAdmin):
+class PlaceAdmin(TranslationAdmin, LeafletGeoAdmin):
     list_display = (
         'id',
         'name',
@@ -133,7 +135,7 @@ class HotelsImageInline(admin.TabularInline):
 
 
 @admin.register(Hotels)
-class HotelsAdmin(LeafletGeoAdmin):
+class HotelsAdmin(TranslationAdmin, LeafletGeoAdmin):
     list_display = (
         'id',
         'name',
@@ -175,7 +177,7 @@ class RestaurantsImageInline(admin.TabularInline):
 
 
 @admin.register(Restaurants)
-class RestaurantsAdmin(LeafletGeoAdmin):
+class RestaurantsAdmin(TranslationAdmin, LeafletGeoAdmin):
     list_display = (
         'id',
         'name',
@@ -216,7 +218,7 @@ class RestaurantsImageAdmin(admin.ModelAdmin):
 
 
 @admin.register(EventsCategory)
-class EventsCategoryAdmin(admin.ModelAdmin):
+class EventsCategoryAdmin(TranslationAdmin):
     list_display = (
         'id',
         'name',
@@ -231,7 +233,7 @@ class EventsCategoryAdmin(admin.ModelAdmin):
 
 
 @admin.register(Events)
-class EventsAdmin(admin.ModelAdmin):
+class EventsAdmin(TranslationAdmin):
     list_display = (
         'id',
         'name',
@@ -259,7 +261,7 @@ class AttractionsImageInline(admin.TabularInline):
 
 
 @admin.register(Attractions)
-class AttractionsAdmin(LeafletGeoAdmin):
+class AttractionsAdmin(TranslationAdmin, LeafletGeoAdmin):
     list_display = (
         'id',
         'name',

@@ -3,6 +3,8 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
 
+from modeltranslation.admin import TranslationAdmin
+
 from .models import CustomUser
 
 
@@ -51,7 +53,7 @@ class UserChangeForm(forms.ModelForm):
         return self.initial["password"]
 
 
-class MyUserAdmin(BaseUserAdmin):
+class MyUserAdmin(BaseUserAdmin, TranslationAdmin):
     # The forms to add and change user instances
     form = UserChangeForm
     add_form = UserCreationForm
