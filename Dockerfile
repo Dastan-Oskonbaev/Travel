@@ -5,6 +5,7 @@ ENV PYTHONUNBUFFERED 1
 # Установка зависимостей GDAL
 RUN apt-get update && \
     apt-get install -y binutils libproj-dev gdal-bin
+RUN apt-get update && apt-get install -y gettext
 # Устанавливает рабочий каталог контейнера — "app"
 WORKDIR /app
 # Копирует все файлы из нашего локального проекта в контейнер
